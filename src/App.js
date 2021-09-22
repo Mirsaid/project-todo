@@ -13,7 +13,7 @@ const onFormSubmit = (e) => {
     e.preventDefault()
     let inpval = inputval.current.value;
     inputval.current.value = ""
-    let arr = todo
+    let arr = [...todo]
     arr.push(inpval)
     settodo(arr)
   };
@@ -39,9 +39,9 @@ const onFormSubmit = (e) => {
         //             </div>           
         // </div>
         
-        <div>
+        <div className="container">
         <h1 className="text-center">TODOS</h1>
-        <div className="container" >
+        <div>
             <div className="row">
                 <div className="col-12">
                     <div className="form-group">
